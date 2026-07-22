@@ -33,7 +33,7 @@ def minesaft_explorer():
         drive_base.heading_control.pid(1000, 1000, 0, 5, 13)
         move(110, 200, 90)     #앞으로 천천히 이동하여 유물 끼우기
         b_m.run_target(200, -118)#먼저 왼팔을 조금 올려 유물 들어올리기
-        f_motor_run(100, -70)   #오른팔을 들어 갱도 탐험가 해결
+        f_motor_run(300, -90)   #오른팔을 들어 갱도 탐험가 해결
         wait(1000)              #1초 기다리며 광차 보내기
         drive_base.heading_control.pid(9000, 3000, 6000, 5, 13)
         drive_base.use_gyro(False)

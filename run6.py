@@ -37,16 +37,17 @@ def second_site_marking():
         move(-70)
         f_motor_run(700, 800)
 def get_and_carry_minecart():
-        b_motor_run(700, -70)
+        b_motor_run(700, -80)
         move(80)
         curve(300, 300, 90, 0)
-        move(450)
+        move(460)
         curve(700, 700, -40, 20)
         b_m.dc(-30)
-        wait(1100)
+        wait(800)
         move(-10)
         b_m.stop()
         move(-80)
+        b_m.run_target(700, 0)
 
 
 def run_6():                    #나중에 main(주 실행창)에서 불러오기 위해 함수로 실행 저장

@@ -16,8 +16,8 @@ hub = PrimeHub()    #허브(프라임 허브)이름 설정
 
 def go_and_solve_map_reveal():
         drive_base.use_gyro(True)
-        move(650)         #지도 공개 미션을 하기 위해 앞으로 이동
-        curve(100, 100, -44, 45)    #42도 회젼하며 방향 맞추기
+        move(655)         #지도 공개 미션을 하기 위해 앞으로 이동
+        curve(100, 100, -45, 45)    #42도 회젼하며 방향 맞추기
         move(270, 300, 300)         #앞으로 이동하여 미션 해결
         f_motor_run(100, 45)        #오른팔을 들며 포토 색션 들어올리기
         move(-129)        #뒤로 빠지기
@@ -25,10 +25,10 @@ def go_and_solve_surface_brushing():
         curve(700, 700, 42, -100)   #45도를 회전하며 표면 붓질과 방향 맞추기
         drive_base.stop()           #멈추며 보정 X
         move(210, 300, 300)         #앞으로 이동하여 정렬
-        move(-15, 500, 500)         #앞으로 이동하여 정렬
+        move(-18, 500, 500)         #앞으로 이동하여 정렬
         drive_base.stop()
-        b_motor_run(700, 630)      #렉기어 내리기
-        b_motor_run(700, -660)       #렉기어 올리며 미션 해결
+        b_motor_run(700, 660)      #렉기어 내리기
+        b_motor_run(700, -700)       #렉기어 올리며 미션 해결
         drive_base.stop()
         wait(250)
 def go_home():
