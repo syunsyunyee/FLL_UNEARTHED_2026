@@ -92,13 +92,13 @@ def wait_for_button_press():
 # -----------------------------------------------------------
 def main():
     global current_run_index
-    
     # 미션 번호가 7보다 작을 동안 계속 반복합니다. (여러 번 미션을 수행하기 위해)
     while current_run_index < 6:
         
         # 1단계: 사용자가 버튼을 눌러 미션을 선택하고 시작할 때까지 기다립니다.
         wait_for_button_press()
         wait(200) # 시작 전 잠깐 대기
+        drive_base.heading_control.pid(21242, 2, 5310, 3, 6)
         run_task(RUNS[current_run_index]())
         current_run_index += 1 # 다음 미션 번호로 자동 넘김
         wait(550) # 미션 종료 후 잠시 대기

@@ -8,7 +8,7 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 
 #전에 작성한 import_def.py 코드에서 move/curve/clean/f_motor_run/b_motor_run/drive_base/b_m 함수 및 변수를 불러옴
-from import_def import move, curve, clean, f_motor_run, b_motor_run, drive_base, f_m, b_m, a_m, e_m
+from import_def import move, curve, f_motor_run, b_motor_run, drive_base, f_m, b_m, a_m, e_m
 from lqr_test import turn_point
 
 hub = PrimeHub()    #허브(프라임 허브)이름 설정

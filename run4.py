@@ -24,8 +24,8 @@ def go_and_solve_map_reveal():
 def go_and_solve_surface_brushing():
         curve(700, 700, 42, -100)   #45도를 회전하며 표면 붓질과 방향 맞추기
         drive_base.stop()           #멈추며 보정 X
-        move(210, 300, 300)         #앞으로 이동하여 정렬
-        move(-18, 500, 500)         #앞으로 이동하여 정렬
+        move(210, 300, 280)         #앞으로 이동하여 정렬
+        move(-23, 500, 500)         #앞으로 이동하여 정렬
         drive_base.stop()
         b_motor_run(700, 660)      #렉기어 내리기
         b_motor_run(700, -700)       #렉기어 올리며 미션 해결

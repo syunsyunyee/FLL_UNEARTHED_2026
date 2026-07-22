@@ -27,7 +27,7 @@ def wait_bluetooth_button():
             wait(10)      
 def first_site_marking():
         drive_base.use_gyro(True)
-        move(520, 700, 700)         #앞으로 이동하여 현장 표시를 두며 미션 전부 끝내
+        move(500, 700, 700)         #앞으로 이동하여 현장 표시를 두며 미션 전부 끝내
         curve(100, 50, 90, 200)
         f_motor_run(700, -400)
 def second_site_marking():
