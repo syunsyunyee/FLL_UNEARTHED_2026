@@ -23,3 +23,6 @@ async def main():
             print(f"발견된 기기: {d.name} ({d.address})")
 
 asyncio.run(main())
+
+
+#test
