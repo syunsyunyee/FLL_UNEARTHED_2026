@@ -99,6 +99,7 @@ def main():
         wait_for_button_press()
         wait(200) # 시작 전 잠깐 대기
         drive_base.heading_control.pid(21242, 2, 5310, 3, 6)
+        drive_base.use_gyro(True)   #자이로 사용
         run_task(RUNS[current_run_index]())
         current_run_index += 1 # 다음 미션 번호로 자동 넘김
         wait(550) # 미션 종료 후 잠시 대기

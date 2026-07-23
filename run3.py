@@ -35,10 +35,10 @@ def minesaft_explorer():
         b_m.run_target(200, -117)#먼저 왼팔을 조금 올려 유물 들어올리기
         f_motor_run(200, -90)   #오른팔을 들어 갱도 탐험가 해결
         wait(1000)              #1초 기다리며 광차 보내기
-        drive_base.heading_control.pid(9000, 3000, 6000, 5, 13)
-        drive_base.use_gyro(False)
+        drive_base.heading_control.pid(9000, 3000, 6000, 5, 13) #pid 제어값 최적에 맞게 튜닝
+        drive_base.use_gyro(False) #보정 제거(자이로 끄기)
         move(-120, 50, 25)      #뒤로 이동하며 유물 꺼내기
-        drive_base.use_gyro(True)
+        drive_base.use_gyro(True) #보정 다시 사용
         f_m.run_target(200, 0)  #오른팔을 0도로 맞추며 들기
         b_m.run_target(200, 0)  #왼팔을 0도로 맞추며 들기
 def go_to_statue_rebuild():
@@ -46,14 +46,14 @@ def go_to_statue_rebuild():
         curve(700, 300, -90, 0) #90도 회전하여 뒤로 가는 방향 맞추기
         move(-100)    #뒤로 100(mm)이동하여 조각상 재건 방향으로 이동
         curve(700, 300, 90, 0)  #90도 회전하여 조각상 재건 하러 방향 맞추기
-        move(168)     #앞으로 이동하여 팔을 넣을 위치 맞추기
+        move(170)     #앞으로 이동하여 팔을 넣을 위치 맞추기
         curve(700, 300, 46, 0)  #41도 회전하여 조각상 재건과 방향 맞추기
         f_motor_run(700, 110)   #오른팔을 내려서 팔이 들어갈 수 있도록 하기
 def statue_rebuild():
         move(220)     #조각상에 팔 넣기
         f_m.run(-30)            #왼쪽 팔 드는방향으로 동작 시작하기
         wait(100)               #좀 이따 돌아야 하므로 0.15초 기다리기
-        curve(300, 300, -15, 0) #왼쪽으로 13도 돌아 조각상 재건 해결 안정성 높이기
+        curve(300, 300, -12, 0) #왼쪽으로 13도 돌아 조각상 재건 해결 안정성 높이기
         wait(59)
         f_m.run_target(700, 0)  #모터를 0점으로 맞추며 완전히 들어올리기
         f_m.stop()              #모터 멈추며 정상화

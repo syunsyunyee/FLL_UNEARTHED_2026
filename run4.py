@@ -25,14 +25,14 @@ def go_and_solve_surface_brushing():
         curve(700, 700, 42, -100)   #45도를 회전하며 표면 붓질과 방향 맞추기
         drive_base.stop()           #멈추며 보정 X
         move(210, 300, 280)         #앞으로 이동하여 정렬
-        move(-23, 500, 500)         #앞으로 이동하여 정렬
+        move(-15, 500, 500)         #앞으로 이동하여 정렬
         drive_base.stop()
         b_motor_run(700, 660)      #렉기어 내리기
         b_motor_run(700, -700)       #렉기어 올리며 미션 해결
         drive_base.stop()
         wait(250)
 def go_home():
-        move(-150)        #뒤로 150(mm)이동하여 홈으로 들어가기 위해 위치 맞추기
+        move(-130)        #뒤로 150(mm)이동하여 홈으로 들어가기 위해 위치 맞추기
         curve(700, 700, 100, 0)     #100도 회전하여 홈이랑 방향 맞추기
         drive_base.use_gyro(False)
         move(-700)        #뒤로 이동하여 홈으로 돌아오기
