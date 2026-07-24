@@ -30,10 +30,10 @@ def silo():
             wait(300)               #0.03초 기다리기
         f_m.run_target(700, 0)
 def heavy_lifting_and_go_home():
-        move(130)         #앞으로 조금 가 무거운 짐을 들어올릴 수 있도록 준비
+        move(110)         #앞으로 조금 가 무거운 짐을 들어올릴 수 있도록 준비
         b_m.run_target(100, 0)      #왼팔 들기(0점)
         drive_base.use_gyro(False)
-        move(300)           #앞으로 가 홈으로 들어
+        move(320)           #앞으로 가 홈으로 들어
 
 
 def run_1():    #나중에 main(주 실행창)에서 불러오기 위해 함수로 실행 저장
