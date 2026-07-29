@@ -42,7 +42,7 @@ def get_and_carry_minecart():
         curve(300, 300, 90, 0)
         move(460)
         curve(700, 700, -40, 20)
-        move(-50)
+        move(-20)
         b_m.dc(-30)
         wait(800)
         b_m.stop()

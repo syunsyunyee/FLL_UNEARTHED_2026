@@ -6,4 +6,4 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 hub = PrimeHub() #허브(프라임 허브)이름 설정
 
-print(hub.battery.voltage())
+print(hub.battery.voltage()) # 허브 베터리 전압 (mV)확인
