@@ -33,11 +33,11 @@ def first_site_marking():
 def second_site_marking():
         move(638, 500, 300)
         curve(300, 100, 90, -0)
-        b_motor_run(700, 100)
+        b_motor_run(700, 115)
         move(-80)
         f_motor_run(700, 800)
 def get_and_carry_minecart():
-        b_motor_run(700, -110)
+        b_motor_run(700, -120)
         move(80)
         curve(300, 300, 90, 0)
         move(460)

@@ -29,7 +29,7 @@ def whats_on_sale():
         b_m.stop()
         f_m.stop()
         wait(1000)                  
-        move(-150)        #뒤로 이동하며 지붕 올리기
+        move(-155)        #뒤로 이동하며 지붕 올리기
         wait(1000)
         b_m.dc(70)
         f_m.dc(-70)

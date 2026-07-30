@@ -26,12 +26,12 @@ def minesaft_explorer():
         drive_base.stop()       #로봇을 멈추며 보정
         drive_base.heading_control.pid(9000, 0, 0) #pid 제어값 최적에 맞게 튜닝
         drive_base.use_gyro(True)
-        b_motor_run(100, -150)  #왼팔 내리기    
+        b_motor_run(200, 250)  #왼팔 내리기    
         f_motor_run(700, 114)   #오른팔 내리기
         drive_base.stop()       #로봇을 멈추며 보정
         drive_base.heading_control.pid(10000, 0, 20)
         move(110, 100, 50)     #앞으로 천천히 이동하여 유물 끼우기
-        b_m.run_target(200, -115)#먼저 왼팔을 조금 올려 유물 들어올리기
+        b_m.run_target(200, 180)#먼저 왼팔을 조금 올려 유물 들어올리기
         f_motor_run(200, -100)   #오른팔을 들어 갱도 탐험가 해결
         wait(1000)              #1초 기다리며 광차 보내기
         drive_base.heading_control.pid(9000, 3000, 6000, 5, 13) #pid 제어값 최적에 맞게 튜닝
