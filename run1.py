@@ -25,8 +25,11 @@ def prepare_silo():
 def silo():
         b_motor_run(100, -120)      #무거운 짐 들기를 해결하기 위해 왼 팔 내리기
         for i in range(3):          #3번 반복하기
-            f_motor_run(10000, -120)#사일로 미션을 해결하기 위해 오른 팔 내리기
-            f_motor_run(10000, 110) #사일로 미션을 다시 해결하기 위해 팔 다시 올리기
+            f_m.dc(-100)#사일로 미션을 해결하기 위해 오른 팔 내리기
+            wait(120)
+            f_m.stop()
+            wait(100)
+            f_m.run_target(10000, -40) #사일로 미션을 다시 해결하기 위해 팔 다시 올리기
             wait(300)               #0.03초 기다리기
         f_m.run_target(700, 0)
 def heavy_lifting_and_go_home():
