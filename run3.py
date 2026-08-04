@@ -13,12 +13,12 @@ from lqr_test import turn_point
 hub = PrimeHub()    #허브(프라임 허브)이름 설정
 
 def go_to_mineshaft_explorer():
-        drive_base.heading_control.pid(10000, 2, 5310, 3, 6)
+        drive_base.heading_control.pid(10000, 0, 3310)
         drive_base.use_gyro(True)
         hub.imu.reset_heading(0)
         move(980, 700, 300)    #앞으로 1100(mm)이동하여 벽정렬 및 앞으로 이동
         drive_base.stop()       #정확한 90도를 돌아야 하므로 요도 방향을 0으로 설정해야해서 로봇 멈추기
-        move(-117)    #뒤로 이동하여 유물을 들기 위한 위치 맞추기
+        move(-114)    #뒤로 이동하여 유물을 들기 위한 위치 맞추기
         drive_base.stop()
         drive_base.heading_control.pid(20000, 0, 5310)
         curve(50, 50, 90, 0)
@@ -26,7 +26,7 @@ def minesaft_explorer():
         drive_base.stop()       #로봇을 멈추며 보정
         drive_base.heading_control.pid(9000, 0, 0) #pid 제어값 최적에 맞게 튜닝
         drive_base.use_gyro(True)
-        b_motor_run(200, 250)  #왼팔 내리기    
+        b_motor_run(200, 240)  #왼팔 내리기    
         f_motor_run(700, 114)   #오른팔 내리기
         drive_base.stop()       #로봇을 멈추며 보정
         drive_base.heading_control.pid(10000, 0, 20)
