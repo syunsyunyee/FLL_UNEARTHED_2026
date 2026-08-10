@@ -28,7 +28,7 @@ from run2 import run_2
 from run3 import run_3
 from run4 import run_4
 from run5 import run_5
-from run6 import run_6
+from run6 import run_6  
 # -----------------------------------------------------------
 # 4. 초기 설정
 # -----------------------------------------------------------
