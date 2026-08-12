@@ -24,9 +24,10 @@ def prepare_silo():
         move(82)          #앞으로 이동하여 완전히 위치 맞추기
 def silo():
         b_motor_run(100, -120)      #무거운 짐 들기를 해결하기 위해 왼 팔 내리기
+        f_m.run_target(300, -40)
         for i in range(3):          #3번 반복하기
             f_m.dc(-100)#사일로 미션을 해결하기 위해 오른 팔 내리기
-            wait(120)
+            wait(110)
             f_m.stop()
             wait(100)
             f_m.run_target(10000, -40) #사일로 미션을 다시 해결하기 위해 팔 다시 올리기
